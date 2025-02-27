@@ -222,7 +222,7 @@ function playnextsong(){
     }
 
     else if(!shuffle.classList.contains("doNotDisplayIt") && repeat.classList.contains("doNotDisplayIt") && repeat_one.classList.contains("doNotDisplayIt")){
-        music_number = Math.floor(Math.random()*maximum_music_songs+1)
+        music_number = Math.floor(Math.random() * (maximum_music_songs - minimum_music_songs + 1)) + minimum_music_songs;
         console.log(music_number);
         let current_music = document.getElementsByClassName("music_playing");
         Array.from(current_music).forEach(current=>{
