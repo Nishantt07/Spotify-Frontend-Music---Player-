@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Personal Spotify Clone</title>
+  <link rel="stylesheet" href="try.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,200&icon_names=repeat_one" />
+</head>
+
+<body>
+  <div class="container">
+
+
+    <!-- header --> 
+      <div class="items header">
+
+      <div class="header-container">
+        <div class="spotify-icon"><i class="fa-brands fa-spotify"></i></div>
+
+        <div class="home-icon"><i class="fa-solid fa-house"></i></div>
+        <div class="search-div"><input type="text" placeholder="What do you want to play?">
+        </div>
+
+
+        <div class="install-details">
+
+          <div class="div-details not-main">
+            <span class="details">Premium</span>
+          </div>
+          <div class="div-details not-main">
+            <span class="details">Support</span>
+          </div>
+          <div class="div-details not-main">
+            <span class="details">Download</span>
+          </div>
+
+          <div class="single-line"></div>
+
+          <div class="div-details  un-main">
+            <i class="fa-regular fa-circle-down fa-bounce"></i>
+            <span class="details">Install App</span>
+          </div>
+
+          <div class="div-details un-main">
+            <span class="details">Sign Up</span>
+          </div>
+
+          <div class="button-div-login div-details un-main">
+            <Button class="button-login">Log in</Button>
+          </div>
+
+          <div class="hamburg" onclick="showfullhamburg()">
+            <i class="fa-solid fa-bars "></i>
+            <ul class="unorder-list-hamburg">
+              <li class="list-items-hamburg"><span class="itspremium"><span class="mainpremium">Premium</span> <i class="fa-solid fa-xmark" style="color: #ffffff;"></i></span>
+                
+              </li>
+              <li  class="list-items-hamburg"><span>Support</span></li>
+              <li  class="list-items-hamburg"><span>Download</span></li>
+              <li  class="list-items-hamburg"><span>Install App</span></li>
+              <li  class="list-items-hamburg"><span>Signup</span></li>
+              <li  class="list-items-hamburg"><span>Login</span></li>
+
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>  
+
+
+
+    <!-- sidebar --> 
+    <div class="items sidebar">
+      <ul class="unorder-list">
+
+
+
+
+        <li class="list-items">
+          <div class="defaultClass-list">
+            <h1 class="fav">Favourites</h1>
+            <div onclick="sidebar_show(this)" class="closehamburg">
+              <i class="fa-solid fa-circle-chevron-left leftchevron"></i>
+
+            </div>
+
+          </div>
+          <div onclick="music_list_show(this)">
+            <img src="ka.jpg" alt="">
+            <span>Karan Aujla</span>
+            <i class="fa-solid fa-chevron-down chevron"></i>
+
+          </div>
+
+          <ul class="song-unordered-list">
+
+            <li class="song-list-items" minimum_music_songs ="0" maximum_music_songs="4" onclick="playmusic(this)" >
+              <div class="0">
+                <span class="song-name">Winning Speech</span>
+                <span class="song-time">3:37</span>
+                <span class="random">karanaujlamusic</span>
+              </div>
+
+            </li>
+            <li class="song-list-items"  minimum_music_songs ="0" maximum_music_songs="4" onclick="playmusic(this)">
+              <div class="1">
+                <span class="song-name">Goin' off</span>
+                <span class="song-time">3:37</span>
+                <span class="random">karanaujlamusic</span>
+
+              </div>
+
+
+            </li>
+            <li class="song-list-items"   minimum_music_songs ="0" maximum_music_songs="4" onclick="playmusic(this)">
+              <div class="2">
+                <span class="song-name">On Top</span>
+                <span class="song-time">3:37</span>
+                <span class="random">karanaujlamusic</span>
+
+              </div>
+
+
+            </li>
+            <li class="song-list-items"   minimum_music_songs ="0" maximum_music_songs="4" onclick="playmusic(this)">
+              <div class="3">
+                <span class="song-name">52 Bars</span>
+                <span class="song-time">3:37</span>
+                <span class="random">karanaujlamusic</span>
+
+              </div>
+
+
+            </li>
+            <li class="song-list-items"   minimum_music_songs ="0" maximum_music_songs="4" onclick="playmusic(this)">
+              <div class="4">
+                <span class="song-name">Champions Anthem</span>
+                <span class="song-time">3:37</span>
+                <span class="random">karanaujlamusic</span>
+
+              </div>
+
+
+            </li>
+          </ul>
+        </li>
+
+        <li class="list-items">
+          <div onclick="music_list_show(this)">
+            <img src="smw.jpg" alt="">
+            <span>Sidhumoose Wala</span>
+            <i class="fa-solid fa-chevron-down  chevron"></i>
+
+          </div>
+          <ul class="song-unordered-list">
+
+            <li class="song-list-items"  minimum_music_songs ="5" maximum_music_songs="9" onclick="playmusic(this) ">
+              <div class="5">
+                <span class="song-name">Aroma</span>
+                <span class="song-time">3:37</span>
+              </div>
+
+            </li>
+            <li class="song-list-items" minimum_music_songs ="5" maximum_music_songs="9" onclick="playmusic(this) ">
+              <div class="6">
+                <span class="song-name">Celebrity Killer</span>
+                <span class="song-time">3:37</span>
+              </div>
+
+
+            </li>
+            <li class="song-list-items"  minimum_music_songs ="5" maximum_music_songs="9" onclick="playmusic(this)">
+              <div class="7">
+                <span class="song-name">The Last Ride</span>
+                <span class="song-time">3:37</span>
+              </div>
+
+
+            </li>
+            <li class="song-list-items"  minimum_music_songs ="5" maximum_music_songs="9" onclick="playmusic(this) ">
+              <div class="8">
+                <span class="song-name">Build Different</span>
+                <span class="song-time">3:37</span>
+              </div>
+
+
+            </li>
+            <li class="song-list-items"   minimum_music_songs ="5" maximum_music_songs="9" onclick="playmusic(this) ">
+              <div class="9">
+                <span class="song-name">Just Listen</span>
+                <span class="song-time">3:37</span>
+              </div>
+
+
+            </li>
+          </ul>
+
+        </li>
+
+        <li class="list-items">
+          <div onclick="music_list_show(this)">
+            <img src="snw.jpg" alt="">
+            <span>Dhandha Nyoliwala</span>
+            <i class="fa-solid fa-chevron-down chevron"></i>
+
+          </div>
+
+          <ul class="song-unordered-list">
+
+            <li class="song-list-items"  minimum_music_songs ="10" maximum_music_songs="14" onclick="playmusic(this) ">
+              <div  class="10">
+                <span class="song-name">Knife Brows</span>
+                <span class="song-time">3:37</span>
+              </div>
+
+            </li>
+            <li class="song-list-items"   minimum_music_songs ="10" maximum_music_songs="14"  onclick="playmusic(this) ">
+              <div class="11">
+                <span class="song-name">Ego Killer</span>
+                <span class="song-time">3:37</span>
+              </div>
+
+
+            </li>
+            <li class="song-list-items"  minimum_music_songs ="10" maximum_music_songs="14"  onclick="playmusic(this) ">
+              <div class="12">
+                <span class="song-name">Russian Bandana</span>
+                <span class="song-time">3:37</span>
+              </div>
+
+
+            </li>
+            <li class="song-list-items"  minimum_music_songs ="10" maximum_music_songs="14"  onclick="playmusic(this) ">
+              <div class="13">
+                <span class="song-name">Jat Clan</span>
+                <span class="song-time">3:37</span>
+              </div>
+
+
+            </li>
+            <li class="song-list-items"   minimum_music_songs ="10" maximum_music_songs="14" onclick="playmusic(this) ">
+              <div class="14">
+                <span class="song-name">Hood</span>
+                <span class="song-time">3:37</span>
+              </div>
+
+
+            </li>
+          </ul>
+
+        </li>
+
+        <li class="list-items">
+          <div onclick="music_list_show(this)">
+            <img src="cheemaY.jpg" alt="">
+            <span>Cheema Y</span>
+            <i class="fa-solid fa-chevron-down chevron"></i>
+
+          </div>
+
+          <ul class="song-unordered-list">
+
+            <li class="song-list-items"  minimum_music_songs ="15" maximum_music_songs="19" onclick="playmusic(this) ">
+              <div class="15">
+                <span class="song-name">Tagde Gharde</span>
+                <span class="song-time">3:37</span>
+              </div>
+
+            </li>
+            <li class="song-list-items"    minimum_music_songs ="15" maximum_music_songs="19" onclick="playmusic(this) ">
+              <div class="16">
+                <span class="song-name">Not Sure</span>
+                <span class="song-time">3:37</span>
+              </div>
+
+
+            </li>
+            <li class="song-list-items"   minimum_music_songs ="15" maximum_music_songs="19" onclick="playmusic(this) ">
+              <div class="17">
+                <span class="song-name">Intro</span>
+                <span class="song-time">3:37</span>
+              </div>
+
+
+            </li>
+            <li class="song-list-items"  minimum_music_songs ="15" maximum_music_songs="19"  onclick="playmusic(this) ">
+              <div class="18">
+                <span class="song-name">Arhe So Jhde</span>
+                <span class="song-time">3:37</span>
+              </div>
+
+
+            </li>
+            <li class="song-list-items"   minimum_music_songs ="15" maximum_music_songs="19" onclick="playmusic(this) ">
+              <div class="19">
+                <span class="song-name">California Love</span>
+                <span class="song-time">3:37</span>
+              </div>
+
+
+            </li>
+          </ul>
+
+        </li>
+
+        <li class="list-items">
+          <div onclick="music_list_show(this)">
+            <img src="as.jpg" alt="">
+            <span>Arijit Singh</span>
+            <i class="fa-solid fa-chevron-down chevron"></i>
+
+          </div>
+
+          <ul class="song-unordered-list">
+
+            <li class="song-list-items"  minimum_music_songs ="20" maximum_music_songs="24" onclick="playmusic(this) ">
+              <div class="20">
+                <span class="song-name">Tum Hi Ho</span>
+                <span class="song-time">3:37</span>
+              </div>
+
+            </li>
+            <li class="song-list-items" minimum_music_songs ="20" maximum_music_songs="24"  onclick="playmusic(this) ">
+              <div class="21">
+                <span class="song-name">Agar Tum Saath Ho</span>
+                <span class="song-time">3:37</span>
+              </div>
+
+
+            </li>
+            <li class="song-list-items" minimum_music_songs ="20" maximum_music_songs="24"  onclick="playmusic(this) ">
+              <div class="22">
+                <span class="song-name">Kabira</span>
+                <span class="song-time">3:37</span>
+              </div>
+
+
+            </li>
+            <li class="song-list-items"  minimum_music_songs ="20" maximum_music_songs="24" onclick="playmusic(this) ">
+              <div class="23">
+                <span class="song-name">Soch Na Sake</span>
+                <span class="song-time">3:37</span>
+              </div>
+
+
+            </li>
+            <li class="song-list-items"  minimum_music_songs ="20" maximum_music_songs="24"  onclick="playmusic(this) ">
+              <div class="24">
+                <span class="song-name">Tujhe Kitna Chahne Lage</span>
+                <span class="song-time">3:37</span>
+              </div>
+
+
+            </li>
+          </ul>
+
+        </li>
+
+        <li class="list-items">
+          <div onclick="music_list_show(this)">
+            <img src="vb.jpg" alt="">
+            <span>Varinder Brar</span>
+            <i class="fa-solid fa-chevron-down chevron"></i>
+
+          </div>
+
+          <ul class="song-unordered-list">
+
+            <li class="song-list-items" minimum_music_songs ="25" maximum_music_songs="29"  onclick="playmusic(this)" >
+              <div class="25">
+                <span class="song-name">Jatt Life Zone</span>
+                <span class="song-time">3:37</span>
+              </div>
+
+            </li>
+            <li class="song-list-items"  minimum_music_songs ="25" maximum_music_songs="29" onclick="playmusic(this)">
+              <div class="26">
+                <span class="song-name">Vyah</span>
+                <span class="song-time">3:37</span>
+              </div>
+
+
+            </li>
+            <li class="song-list-items" minimum_music_songs ="25" maximum_music_songs="29" onclick="playmusic(this)">
+              <div class="27">
+                <span class="song-name">Circle</span>
+                <span class="song-time">3:37</span>
+              </div>
+
+
+            </li>
+            <li class="song-list-items" minimum_music_songs ="25" maximum_music_songs="29" onclick="playmusic(this)">
+              <div class="28">
+                <span class="song-name">Money Talk</span>
+                <span class="song-time">3:37</span>
+              </div>
+
+
+            </li>
+            <li class="song-list-items" minimum_music_songs ="25" maximum_music_songs="29" onclick="playmusic(this)">
+              <div class="29">
+                <span class="song-name">The Lion</span>
+                <span class="song-time">3:37</span>
+              </div>
+
+
+            </li>
+          </ul>
+
+        </li>
+
+        <li class="list-items">
+          <div onclick="music_list_show(this)">
+            <img src="bm.jpg" alt="">
+            <span>Babbu Maan</span>
+            <i class="fa-solid fa-chevron-down chevron"></i>
+
+          </div>
+
+          <ul class="song-unordered-list">
+
+            <li class="song-list-items" minimum_music_songs ="30" maximum_music_songs="34" onclick="playmusic(this)">
+              <div class="30">
+                <span class="song-name">Gypsy Kali</span>
+                <span class="song-time">3:37</span>
+              </div>
+
+            </li>
+            <li class="song-list-items"  minimum_music_songs ="30" maximum_music_songs="34"  onclick="playmusic(this)">
+              <div class="31">
+                <span class="song-name">Jatt Di Joon Buri</span>
+                <span class="song-time">3:37</span>
+              </div>
+
+
+            </li>
+            <li class="song-list-items"  minimum_music_songs ="30" maximum_music_songs="34" onclick="playmusic(this)">
+              <div class="32">
+                <span class="song-name">Mehfil Mitran Di</span>
+                <span class="song-time">3:37</span>
+              </div>
+
+
+            </li>
+            <li class="song-list-items"  minimum_music_songs ="30" maximum_music_songs="34" onclick="playmusic(this)">
+              <div class="33">
+                <span class="song-name">Kabza</span>
+                <span class="song-time">3:37</span>
+              </div>
+
+
+            </li>
+            <li class="song-list-items"  minimum_music_songs ="30" maximum_music_songs="34" onclick="playmusic(this)">
+              <div class="34">
+                <span class="song-name">Jit Da Jashan</span>
+                <span class="song-time">3:37</span>
+              </div>
+
+
+            </li>
+          </ul>
+
+        </li>
+
+      </ul>
+
+    </div>
+
+
+
+    <!-- mainbar --> 
+    <div class="items mainbar">
+      <div class="artist-division">
+        <span class="artist-name-tag">Popular Artists</span>
+        <span class="artist-stream-tag">Show all</span>
+      </div>
+      <div class="mainbar-wrapper">
+
+
+
+        <div class="artist-divi">
+          <div class="artist-div">
+            <div class="artist-image-div">
+              <img src="pritham.jpg" alt="">
+              <div class="play-icon"><i class="fa-solid fa-circle-play fa-2xl" style="color: #1ed760;"></i></div>
+
+            </div>
+            <div class="artist-details-div">
+              <span class="artist-name">Pritham</span>
+              <span class="artist-stream">Artist</span>
+            </div>
+
+          </div>
+
+          <div class="artist-div">
+            <div class="artist-image-div">
+              <img src="as.jpg" alt="">
+              <div class="play-icon"><i class="fa-solid fa-circle-play fa-2xl" style="color: #1ed760;"></i></div>
+
+            </div>
+            <div class="artist-details-div">
+              <span class="artist-name">Arijit Singh</span>
+              <span class="artist-stream">Artist</span>
+            </div>
+
+          </div>
+
+          <div class="artist-div">
+            <div class="artist-image-div">
+              <img src="arrahman.jpg" alt="">
+              <div class="play-icon"><i class="fa-solid fa-circle-play fa-2xl" style="color: #1ed760;"></i></div>
+
+            </div>
+            <div class="artist-details-div">
+              <span class="artist-name">A.R.Rahman</span>
+              <span class="artist-stream">Artist</span>
+            </div>
+
+          </div>
+
+          <div class="artist-div">
+            <div class="artist-image-div">
+              <img src="sachinjigar.jpg" alt="">
+              <div class="play-icon"><i class="fa-solid fa-circle-play fa-2xl" style="color: #1ed760;"></i></div>
+
+            </div>
+            <div class="artist-details-div">
+              <span class="artist-name">Sachin Jigar</span>
+              <span class="artist-stream">Artist</span>
+            </div>
+          </div>
+
+          <div class="artist-div">
+            <div class="artist-image-div">
+              <img src="vishalshekhar.jpg" alt="">
+              <div class="play-icon"><i class="fa-solid fa-circle-play fa-2xl" style="color: #1ed760;"></i></div>
+
+            </div>
+            <div class="artist-details-div">
+              <span class="artist-name">Vishal Shekhar</span>
+              <span class="artist-stream">Artist</span>
+            </div>
+          </div>
+
+          <div class="artist-div">
+            <div class="artist-image-div">
+              <img src="atif-aslam.jpg" alt="">
+              <div class="play-icon"><i class="fa-solid fa-circle-play fa-2xl" style="color: #1ed760;"></i></div>
+
+            </div>
+
+            <div class="artist-details-div">
+              <span class="artist-name">Atif Aslam</span>
+              <span class="artist-stream">Artist</span>
+            </div>
+
+          </div>
+
+
+          <div class="artist-div">
+            <div class="artist-image-div">
+              <img src="uditnarayan.jpg" alt="">
+              <div class="play-icon"><i class="fa-solid fa-circle-play fa-2xl" style="color: #1ed760;"></i></div>
+
+            </div>
+
+            <div class="artist-details-div">
+              <span class="artist-name">Udit Narayan</span>
+              <span class="artist-stream">Artist</span>
+            </div>
+
+          </div>
+
+          <div class="artist-div extra-div">
+            <div class="artist-image-div">
+              <img src="nahiptabroteranaam.jpg" alt="">
+              <div class="play-icon"><i class="fa-solid fa-circle-play fa-2xl" style="color: #1ed760;"></i></div>
+
+            </div>
+
+            <div class="artist-details-div">
+              <span class="artist-name">Vishal Mishra</span>
+              <span class="artist-stream">Artist</span>
+            </div>
+
+          </div>
+
+
+        </div>
+      </div>
+
+
+
+
+    <!-- popular albums and singles -->
+
+    <div class="artist-division">
+      <div class="artist-name-tag"><span>Popular album and singles</span></div>
+      <div class="artist-stream-tag"><span>Show all</span></div>
+    </div>
+
+      <div class="popular-albums-and-singles">
+
+  
+        <div class="artist-div">
+          <div class="artist-image-divi">
+            <img src="stk.jpg" alt="">
+            <div class="play-icon"><i class="fa-solid fa-circle-play fa-2xl" style="color: #1ed760;"></i></div>
+
+          </div>
+
+         <div class="artist-details-div">
+          <span class="artist-name">Sanam Teri Kasam</span>
+          <span class="artist-stream">Himesh Reshmmiya</span>
+         </div>
+
+        </div>
+
+        <div class="artist-div">
+          <div class="artist-image-divi">
+            <img src="aasqui2.jpg" alt="">
+            <div class="play-icon"><i class="fa-solid fa-circle-play fa-2xl" style="color: #1ed760;"></i></div>
+
+          </div>
+
+         <div class="artist-details-div">
+          <span class="artist-name">Aashqi 2</span>
+          <span class="artist-stream">Mithoon, Ankit Tiwari</span>
+         </div>
+
+        </div>        <div class="artist-div">
+          <div class="artist-image-divi">
+            <img src="glorry.jpg" alt="">
+            <div class="play-icon"><i class="fa-solid fa-circle-play fa-2xl" style="color: #1ed760;"></i></div>
+
+          </div>
+
+         <div class="artist-details-div">
+          <span class="artist-name">Glory</span>
+          <span class="artist-stream">Honey Singh</span>
+         </div>
+
+        </div>
+        
+        <div class="artist-div">
+          <div class="artist-image-divi">
+            <img src="yzhd.jpg" alt="">
+            <div class="play-icon"><i class="fa-solid fa-circle-play fa-2xl" style="color: #1ed760;"></i></div>
+
+          </div>
+
+         <div class="artist-details-div">
+          <span class="artist-name">Ye Jawani Hai Dewani</span>
+          <span class="artist-stream">Pritam</span>
+         </div>
+
+        </div>
+
+          
+        <div class="artist-div">
+          <div class="artist-image-divi">
+            <img src="mism.jpg" alt="">
+            <div class="play-icon"><i class="fa-solid fa-circle-play fa-2xl" style="color: #1ed760;"></i></div>
+
+          </div>
+
+         <div class="artist-details-div">
+          <span class="artist-name">Mismatched</span>
+          <span class="artist-stream">Mismatched-Cast</span>
+         </div>
+
+        </div>
+
+          
+        <div class="artist-div">
+          <div class="artist-image-divi">
+            <img src="scirio.jpg" alt="">
+            <div class="play-icon"><i class="fa-solid fa-circle-play fa-2xl" style="color: #1ed760;"></i></div>
+
+          </div>
+
+         <div class="artist-details-div">
+          <span class="artist-name">Sicario</span>
+          <span class="artist-stream">Shubh</span>
+         </div>
+
+        </div>
+
+
+        
+          
+        <div class="artist-div extra-div">
+          <div class="artist-image-divi">
+            <img src="hnm.jpg" alt="">
+            <div class="play-icon"><i class="fa-solid fa-circle-play fa-2xl" style="color: #1ed760;"></i></div>
+
+          </div>
+
+         <div class="artist-details-div">
+          <span class="artist-name">Who(Remix)</span>
+          <span class="artist-stream">Jimin</span>
+         </div>
+
+        </div>
+
+
+      </div>
+
+
+      
+    <div class="artist-division">
+      <div class="artist-name-tag"><span>Popular Radio</span></div>
+      <div class="artist-stream-tag"><span>Show all</span></div>
+    </div>
+
+    <div class="popular-albums-and-singles">
+
+  
+      <div class="artist-div">
+        <div class="artist-image-divi">
+          <img src="radio1.jpg" alt="">
+          <div class="play-icon"><i class="fa-solid fa-circle-play fa-2xl" style="color: #1ed760;"></i></div>
+
+        </div>
+
+       <div class="artist-details-div">
+        <!-- <span class="artist-name">album name</span> -->
+        <span class="artist-stream">With Sachin-Jigar,<br>Amit Trivedi,Mithoo...</span>
+       </div>
+
+      </div>
+
+      <div class="artist-div">
+        <div class="artist-image-divi">
+          <img src="radio2.jpg" alt="">
+            <div class="play-icon addon"><i class="fa-solid fa-circle-play fa-2xl" style="color: #1ed760;"></i></div>
+
+        </div>
+
+       <div class="artist-details-div">
+        <!-- <span class="artist-name">album name</span> -->
+        <span class="artist-stream">With Karan Aujla,<br>Shubh,Badshsh and...</span>
+       </div>
+
+      </div>        <div class="artist-div">
+        <div class="artist-image-divi">
+          <img src="radio3.jpg" alt="">
+            <div class="play-icon"><i class="fa-solid fa-circle-play fa-2xl" style="color: #1ed760;"></i></div>
+
+        </div>
+
+       <div class="artist-details-div">
+        <!-- <span class="artist-name">album name</span> -->
+        <span class="artist-stream">With Armaan Malik,<br> Pritam,Ankit Tiwari...</span>
+       </div>
+
+      </div>
+      
+      <div class="artist-div">
+        <div class="artist-image-divi">
+          <img src="radio4.jpg" alt="">
+            <div class="play-icon"><i class="fa-solid fa-circle-play fa-2xl" style="color: #1ed760;"></i></div>
+
+        </div>
+
+       <div class="artist-details-div">
+        <!-- <span class="artist-name">album name</span> -->
+        <span class="artist-stream">With A.R.Rahman,<br>Vishal-Shekhar,Atif...</span>
+       </div>
+
+      </div>
+
+        
+      <div class="artist-div">
+        <div class="artist-image-divi">
+          <img src="radio5.jpg" alt="">
+            <div class="play-icon"><i class="fa-solid fa-circle-play fa-2xl" style="color: #1ed760;"></i></div>
+
+        </div>
+
+       <div class="artist-details-div">
+        <!-- <span class="artist-name">album name</span> -->
+        <span class="artist-stream">With Mohammed Rafi,<br>Muskan,Kishore...</span>
+       </div>
+
+      </div>
+
+        
+      <div class="artist-div">
+        <div class="artist-image-divi">
+          <img src="radio6.jpg" alt="">
+            <div class="play-icon"><i class="fa-solid fa-circle-play fa-2xl" style="color: #1ed760;"></i></div>
+
+        </div>
+
+       <div class="artist-details-div">
+        <!-- <span class="artist-name">album name</span> -->
+        <span class="artist-stream">With Anirudh <br> Ravichander, Harris...</span>
+       </div>
+
+      </div>
+
+
+      
+        
+      <div class="artist-div extra-div">
+        <div class="artist-image-divi">
+          <img src="radio7.jpg" alt="">
+            <div class="play-icon"><i class="fa-solid fa-circle-play fa-2xl" style="color: #1ed760;"></i></div>
+
+        </div>
+
+       <div class="artist-details-div">
+        <!-- <span class="artist-name">album name</span> -->
+        <span class="artist-stream">With Diljeeet Dosanjh,Shubh,<br>AP Dhillion and more</span>
+       </div>
+
+      </div>
+
+
+    </div>
+
+
+    <div class="ending-details">
+      <div class="ending-details-wrapper">
+
+
+        <div class="ending-details-div">
+          <div class="ending-details-head">
+            <span>Company</span>
+          </div>
+          <div class="ending-details-option">
+            <span>About</span>
+            <span>Jobs</span>
+            <span>For the Record</span>
+          </div>
+        </div>
+
+
+        <div class="ending-details-div">
+          <div class="ending-details-head">
+            <span>Communities</span>
+          </div>
+          <div class="ending-details-option">
+            <span>For Artists</span>
+            <span>Developers</span>
+            <span>Advertising</span>
+            <span>Investors</span>
+            <span>Vendors</span>
+          </div>
+
+        </div>
+
+
+        <div class="ending-details-div">
+          <div class="ending-details-head">
+            <span>Useful Links</span>
+          </div>
+          <div class="ending-details-option">
+            <span>Support</span>
+            <span>Free Mobile App</span>
+          </div>
+
+        </div>
+
+
+        <div class="ending-details-div">
+          <div class="ending-details-head">
+            <span>Spotify Plans</span>
+          </div>
+          <div class="ending-details-option">
+            <span>Premium Individual</span>
+            <span>Premium Duo</span>
+            <span>Premium Family</span>
+            <span>Premium Student</span>
+            <span>Spotify Free</span>
+          </div>
+
+        </div>
+
+
+        <div class="ending-details-div">
+          <div class="ending-details-head">
+            <span>Social Links</span>
+          </div>
+          <div class="ending-details-option icons-div">
+            <div class="iconhead">
+              <span class="facebook"><i class="fa-brands fa-facebook facebook-icon"></i></span>
+            </div>
+            <div class="iconhead">
+              <span class="instagram"><i class="fa-brands fa-instagram instagram-icon"></i></span>
+            </div>
+
+            <div  class="iconhead">
+
+              <span class="twitter"><i class="fa-brands fa-twitter twitter-icon"></i></span>
+
+            </div>
+          </div>
+
+        </div>
+
+
+      </div>
+    </div>
+
+
+
+
+      
+
+      </div>
+
+
+      
+    <!-- footer --> 
+    <div class="items footer">
+      <div class="footer-wrapper">
+
+
+        <div class="footer-image-name-singer-div">
+
+          
+          <div>
+            <div><img src="" alt="" class="footer-image"></div>
+          </div>
+
+          <div class="footer-song-singer-name">
+            <div><span class="song-name-footer"></span></div>
+            <div><span class="singer-name-footer"></span></div>
+          </div>
+
+        </div>
+
+<div class="for-work">
+        <div class="play-pause-next">
+          <a ><span><i class="fa-solid fa-cloud-arrow-down downloadsong"></i></span></a>
+
+          <span ><i class="fa-solid fa-backward-step" onclick="playprevioussong()"></i></span>
+
+          <span onclick="musiconof()">
+            <div class="playy">
+              <i class="fa-solid fa-play play"></i>
+            </div>
+            <div class="displayit pausee">
+            <i class="fa-solid fa-pause pause"></i>
+            </div>
+            
+          </span>
+          <span><i class="fa-solid fa-forward-step" onclick="playnextsong()" ></i></span>
+          <div class="multifonts" onclick="change_music_icon()">
+            <div class="shuffle doNotDisplayIt"><i class="fa-solid fa-shuffle music-change "></i></div>
+            <div class="repeat"><i class="fa-solid fa-repeat music-change "></i></div>
+            <div class="repeat_one doNotDisplayIt" ><span class="material-symbols-rounded music-change ">
+              repeat_one
+              </span></div>
+          </div>
+        </div>
+
+        <div class="progress-bar">
+          <div class="progress-bar-wrapper">
+          </div>
+          <div class="progress-timer">
+            <span class="first-child"></span>
+            <span class="last-child"></span>
+          </div>
+          <audio src=""></audio>
+        </div>
+
+</div>
+
+
+            <div class="volumne-icon-div"><i class="fa-solid fa-volume-high"></i></div>
+          <div class="volume-bar">
+
+
+            <div class="volume-bar-wrapper">
+              
+            </div>
+  
+          </div>
+
+
+
+
+
+
+
+
+      </div>
+    </div> 
+
+
+      </div>
+
+      
+
+      
+
+
+
+
+  </div>
+  <script src="musicdetails.js"></script>
+  <script src="try.js"></script>
+</body>
+
+</html>
